@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 110" fill="none">
+  <!-- H -->
+  <text x="0" y="100" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="110" fill="black" letter-spacing="-4">H</text>
+  <!-- S -->
+  <text x="162" y="100" font-family="Arial Black, Impact, sans-serif" font-weight="900" font-size="110" fill="black" letter-spacing="-4">S</text>
+  <!-- Basketball / compass icon centered between H and S -->
+  <g transform="translate(108, 30)">
+    <circle cx="32" cy="28" r="28" stroke="black" stroke-width="2.5" fill="none"/>
+    <path d="M4,28 Q32,6 60,28" stroke="black" stroke-width="1.8" fill="none"/>
+    <path d="M4,28 Q32,50 60,28" stroke="black" stroke-width="1.8" fill="none"/>
+    <line x1="32" y1="0" x2="32" y2="56" stroke="black" stroke-width="1.8"/>
+    <path d="M32,4 L44,36 L32,30 L20,36 Z" fill="black"/>
+    <path d="M32,52 L44,20 L32,26 L20,20 Z" fill="black" opacity="0.35"/>
+    <circle cx="32" cy="28" r="3" fill="black"/>
+    <line x1="32" y1="0" x2="32" y2="6" stroke="black" stroke-width="2.5"/>
+    <line x1="32" y1="50" x2="32" y2="56" stroke="black" stroke-width="2.5"/>
+    <line x1="4" y1="28" x2="10" y2="28" stroke="black" stroke-width="2.5"/>
+    <line x1="54" y1="28" x2="60" y2="28" stroke="black" stroke-width="2.5"/>
+  </g>
+</svg>
