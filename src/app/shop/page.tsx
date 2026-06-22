@@ -8,9 +8,11 @@ import { ShoppingBag, ExternalLink, AlertCircle } from "lucide-react";
 interface Product {
   id: number;
   name: string;
+  handle: string;
   thumbnail_url: string;
   price: string;
   currency: string;
+  url: string;
 }
 
 function ProductSkeleton() {
@@ -31,16 +33,16 @@ function NotConfiguredState() {
     <div className="col-span-full flex flex-col items-center justify-center py-24 text-center">
       <div
         className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6"
-        style={{ backgroundColor: "oklch(0.65 0.22 45 / 12%)" }}
+        style={{ backgroundColor: "oklch(1 0 0 / 8%)" }}
       >
-        <ShoppingBag className="w-10 h-10 text-[#F97316]" aria-hidden="true" />
+        <ShoppingBag className="w-10 h-10 text-white/40" aria-hidden="true" />
       </div>
       <h3 className="font-heading font-bold text-white text-3xl mb-2">
         Store Coming Soon
       </h3>
       <p className="text-white/40 text-sm max-w-sm">
         Add your{" "}
-        <code className="text-[#F97316] bg-[#F97316]/10 px-1 py-0.5 rounded text-xs">
+        <code className="text-slate-400 bg-white/8 px-1 py-0.5 rounded text-xs">
           PRINTFUL_API_KEY
         </code>{" "}
         to your environment variables to display products here.
@@ -57,9 +59,9 @@ function EmptyState() {
     <div className="col-span-full flex flex-col items-center justify-center py-24 text-center">
       <div
         className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6"
-        style={{ backgroundColor: "oklch(0.65 0.22 45 / 12%)" }}
+        style={{ backgroundColor: "oklch(1 0 0 / 8%)" }}
       >
-        <ShoppingBag className="w-10 h-10 text-[#F97316]" aria-hidden="true" />
+        <ShoppingBag className="w-10 h-10 text-white/40" aria-hidden="true" />
       </div>
       <h3 className="font-heading font-bold text-white text-3xl mb-2">
         Dropping Soon
@@ -120,14 +122,14 @@ export default function ShopPage() {
           className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse, oklch(0.65 0.22 45 / 12%) 0%, transparent 70%)",
+              "radial-gradient(ellipse, oklch(1 0 0 / 6%) 0%, transparent 70%)",
           }}
           aria-hidden="true"
         />
         <div className="relative max-w-6xl mx-auto">
           <Badge
-            className="mb-6 px-4 py-1.5 text-sm font-medium border border-[#F97316]/30 text-[#F97316]"
-            style={{ backgroundColor: "oklch(0.65 0.22 45 / 12%)" }}
+            className="mb-6 px-4 py-1.5 text-sm font-medium border border-white/20 text-white/50"
+            style={{ backgroundColor: "oklch(1 0 0 / 8%)" }}
           >
             Official Merch
           </Badge>
@@ -209,12 +211,12 @@ function ProductCard({ product }: { product: Product }) {
         <h3 className="font-heading font-bold text-white text-lg leading-tight mb-1 line-clamp-2">
           {product.name}
         </h3>
-        <p className="text-[#F59E0B] font-semibold text-base mb-4">{formattedPrice}</p>
+        <p className="text-white/70 font-semibold text-base mb-4">{formattedPrice}</p>
         <a
-          href={`https://www.printful.com/dashboard/default/sync-products/${product.id}`}
+          href={product.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-gradient-brand text-black font-semibold text-sm hover:opacity-90 transition-opacity duration-200 cursor-pointer"
+          className="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl bg-white/10 border border-white/15 text-white font-semibold text-sm hover:bg-white/15 transition-colors duration-200 cursor-pointer"
           aria-label={`Buy ${product.name}`}
         >
           Buy Now

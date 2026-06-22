@@ -142,7 +142,7 @@
   }
   .product-card-hover:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 60px oklch(0.65 0.22 45 / 20%);
+    box-shadow: 0 20px 60px oklch(1 0 0 / 10%);
   }
 }
 
